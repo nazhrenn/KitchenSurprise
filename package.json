@@ -4,7 +4,14 @@
   "description": "KitchenSurprise",
   "main": "app.js",
   "author": {
-    "name": "Tyler",
-    "email": ""
+    "email": "nazhrenn@gmail.com",
+    "name": "nazhrenn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazhrenn/KitchenSurprise.git"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
   }
 }
