@@ -1,0 +1,10 @@
+{
+  "name": "KitchenSurprise",
+  "version": "0.0.0",
+  "description": "KitchenSurprise",
+  "main": "app.js",
+  "author": {
+    "name": "Tyler",
+    "email": ""
+  }
+}
