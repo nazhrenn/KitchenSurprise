@@ -1,0 +1,26 @@
+{
+  "name": "KitchenSurprise",
+  "version": "0.0.0",
+  "description": "Kitchen Management Tool",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "kitchen"
+  ],
+  "authors": [
+    "Tyler Coles"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.7",
+    "angular-route": "~1.4.7"
+  }
+}
