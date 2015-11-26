@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="modules\update-checker.js" />
     <Content Include="static\app\kitchen.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -42,6 +43,7 @@
     <Content Include="views\master.jade" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="modules\" />
     <Folder Include="static\app\" />
     <Folder Include="static\css\" />
     <Folder Include="static\views\" />
