@@ -8,7 +8,7 @@ block scripts
   script(type="text/javascript" src="static/app/kitchen.js")
 
 block content
-  div.viewArea(ng-app="kitchenApp" ng-controller="masterController")
+  div.viewArea(ng-app="kitchenApp" ng-controller="masterController as master")
     ul.menu
       li
         a(href="#/home") Home

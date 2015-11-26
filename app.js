@@ -14,10 +14,9 @@ app.get('/', function (req, res) {
 	res.render('main', { title: "Kitchen Surprise" });
 });
 
-app.get('/checkForUpdate', function (req, res) {
-	var version = updateChecker.checkUpdate(function (value) {
-		res.json(value);
-	});
+app.get('/getVersion', function (req, res) {
+	var version = updateChecker.getVersion();
+	res.json({ version : version });
 });
 
 var server = app.listen(3000, function () {
