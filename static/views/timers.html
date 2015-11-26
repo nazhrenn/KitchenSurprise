@@ -1,35 +1,39 @@
-﻿<input type="button" value="Create Timer" ng-click="timeCtrl.displayCreateDialog=true" />
-<div ng-show="timeCtrl.displayCreateDialog">
-	<div>
-		Title:
-		<input type='text' ng-model="timeCtrl.timer.title" ng-virtual-keyboard />
+﻿<div id="timers">
+	<input type="button" value="Show Create Timer Dialog" ng-click="timeCtrl.displayCreateDialog=!timeCtrl.displayCreateDialog" />
+	<div id="createTimerDialog" ng-show="timeCtrl.displayCreateDialog" draggable>
+		<div>
+			<input type='text' placeholder="Title..." id="createTimer-title" ng-model="timeCtrl.timer.title" ng-virtual-keyboard="{relative : false}" />
+		</div>
+		<div>
+			<input type="text" placeholder="00:00:00" id="createTimer-duration" ng-model="timeCtrl.timer.display" />
+		</div>
+		<div>
+			<div>
+				<input class="digit" type="button" value="1" ng-click="timeCtrl.addDigit(1)" />
+				<input class="digit" type="button" value="2" ng-click="timeCtrl.addDigit(2)" />
+				<input class="digit" type="button" value="3" ng-click="timeCtrl.addDigit(3)" />
+			</div>
+			<div>
+				<input class="digit" type="button" value="4" ng-click="timeCtrl.addDigit(4)" />
+				<input class="digit" type="button" value="5" ng-click="timeCtrl.addDigit(5)" />
+				<input class="digit" type="button" value="6" ng-click="timeCtrl.addDigit(6)" />
+			</div>
+			<div>
+				<input class="digit" type="button" value="7" ng-click="timeCtrl.addDigit(7)" />
+				<input class="digit" type="button" value="8" ng-click="timeCtrl.addDigit(8)" />
+				<input class="digit" type="button" value="9" ng-click="timeCtrl.addDigit(9)" />
+			</div>
+			<div>
+				<input class="digit" type="button" value="0" ng-click="timeCtrl.addDigit(0)" />
+				<input class="digit" type="button" value="BKSP" ng-click="timeCtrl.removeDigit()" />
+			</div>
+		</div>
+		<div id="timerAutoStart">
+			<input type="checkbox" id="timerAutoStartCheckbox" ng-model="timeCtrl.timer.autoStart" />
+			<label for="timerAutoStartCheckbox">Auto Start Timer</label>
+		</div>
+		<input type="button" id="timerAddButton" value="Add" ng-click="timeCtrl.createTimer(timeCtrl.timerSetup)" />
 	</div>
-	<div>
-		Duration:
-		<input type="text" ng-model="timeCtrl.timer.display" />
-	</div>
-	<div>
-		<div>
-			<input type="button" value="1" ng-click="timeCtrl.addDigit(1)" />
-			<input type="button" value="2" ng-click="timeCtrl.addDigit(2)" />
-			<input type="button" value="3" ng-click="timeCtrl.addDigit(3)" />
-		</div>
-		<div>
-			<input type="button" value="4" ng-click="timeCtrl.addDigit(4)" />
-			<input type="button" value="5" ng-click="timeCtrl.addDigit(5)" />
-			<input type="button" value="6" ng-click="timeCtrl.addDigit(6)" />
-		</div>
-		<div>
-			<input type="button" value="7" ng-click="timeCtrl.addDigit(7)" />
-			<input type="button" value="8" ng-click="timeCtrl.addDigit(8)" />
-			<input type="button" value="9" ng-click="timeCtrl.addDigit(9)" />
-		</div>
-		<div>
-			<input type="button" value="0" ng-click="timeCtrl.addDigit(0)" />
-			<input type="button" value="<" ng-click="timeCtrl.removeDigit()" />
-		</div>
-	</div>
-	<input type="button" value="Add" ng-click="timeCtrl.createTimer(timeCtrl.timerSetup)" />
-</div>
 
-<timer ng-repeat="(key, t) in timeCtrl.timers" duration="{{t.duration}}" title="{{t.title}}" auto-start="true"></timer>
+	<timer ng-repeat="(key, t) in timeCtrl.timers" duration="{{t.duration}}" title="{{t.title}}" auto-start="{{t.autoStart}}"></timer>
+</div>

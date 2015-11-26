@@ -40,7 +40,7 @@ kitchenApp.controller("masterController", ['$http', function ($http) {
 var timerClass = function (title, duration, autoStart) {
 	this.duration = duration;
 	this.title = title;
-	this.autoStart = !autoStart ? false : true;
+	this.autoStart = autoStart;
 };
 
 kitchenApp.controller("homeController", ['$scope', function ($scope) {
@@ -87,19 +87,18 @@ kitchenApp.controller('timerController', function () {
 		var duration = 0;
 
 		if (segments.length == 3) {
-			duration += (segments[0] * 60 * 60);
-			duration += (segments[1] * 60);
-			duration += (segments[2]);
+			duration += Number(segments[0] * 60 * 60, 10);
+			duration += Number.parseInt(segments[1] * 60, 10);
+			duration += Number.parseInt(segments[2], 10);
 		}
 		else if (segments.length == 2) {
-			duration += (segments[0] * 60);
-			duration += (segments[1]);
+			duration += Number.parseInt(segments[0] * 60, 10);
+			duration += Number.parseInt(segments[1], 10);
 		}
 		else {
-			duration += (segments[0]);
+			duration += Number.parseInt(segments[0], 10);
 		}
-
-		this.addTimer(this.timer.title, duration, false);
+		this.addTimer(this.timer.title, duration + 1, this.timer.autoStart);
 		this.timer = defaultTimer();
 		this.digits = [];
 		this.displayCreateDialog = false;
@@ -194,6 +193,7 @@ kitchenApp.directive('timer', ['$interval', 'dateFilter', function ($interval, d
 
 		scope.reset = function () {
 			scope.duration = originalDuration;
+			scope.pause();
 		};
 
 		scope.flash = function () {
@@ -226,8 +226,10 @@ kitchenApp.directive('timer', ['$interval', 'dateFilter', function ($interval, d
 		});
 
 		// start the UI update process; save the timeoutId for canceling
-		if (scope.autoStart) {
+		if (scope.autoStart === "true") {
 			scope.start();
+		} else {
+			scope.pause();
 		}
 	}
 

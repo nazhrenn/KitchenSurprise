@@ -1,4 +1,4 @@
-﻿body {
+body {
 }
 
 timer > div {
@@ -53,3 +53,59 @@ timer.running > div {
 timer.paused > div {
 	background-color: yellow;
 }
+
+div#createTimerDialog {
+
+margin-top: 0.5em;
+
+border:  1px solid black;
+
+text-align:  center;
+}
+
+div#createTimerDialog input.digit {
+	width: 4em;
+	height:  4em;
+	margin:  0.5em;
+}
+
+input[type="button"] {}
+
+input#timerAddButton {
+    width:  15em;
+    height:  4em;
+    margin: 0.5em 0 1em 0.5em;
+}
+
+input#createTimer-title {
+    width: 14em;
+    padding:  0.5em;
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+div#timers {
+    width: 16em;
+}
+
+input#createTimer-duration {
+    width: 14em;
+    padding:  0.5em;
+    margin: 1em 0 0.5em 0;
+    font-size:  1em;
+    text-align:  right;
+}
+
+div#timerAutoStart input {
+    width:  2em;
+    height: 2em;
+    position: relative;
+    top: 0.4em;
+}
+
+div#timerAutoStart label {
+    font-size:  1.5em;
+}
+
+div#timerAutoStart {
+margin: 0.5em 0;}
