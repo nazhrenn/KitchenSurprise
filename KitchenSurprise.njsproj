@@ -37,7 +37,10 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="static\css\main.css" />
+    <Content Include="static\partials\pane.html" />
+    <Content Include="static\partials\timer.html" />
     <Content Include="static\views\home.html" />
+    <Content Include="static\views\timers.html" />
     <Content Include="views\header.jade" />
     <Content Include="views\main.jade" />
     <Content Include="views\master.jade" />
@@ -46,6 +49,7 @@
     <Folder Include="modules\" />
     <Folder Include="static\app\" />
     <Folder Include="static\css\" />
+    <Folder Include="static\partials\" />
     <Folder Include="static\views\" />
     <Folder Include="views\" />
     <Folder Include="static\" />

@@ -1,2 +1,55 @@
 ﻿body {
 }
+
+timer > div {
+	width: 25em;
+	border: 1px solid black;
+}
+
+timer > div > div#close {
+	position: relative;
+	float: right;
+	cursor: pointer;
+	width: 1em;
+	border: 1px solid black;
+	border-width: 0 0 1px 1px;
+	text-align: center;
+	top: 0;
+	font-size: 2em;
+}
+
+timer > div > div#title {
+	text-align: left;
+	font-size: 2em;
+	padding: 0.25em 0.5em 0 0.5em;
+}
+
+timer > div > div#countdown {
+	text-align: right;
+	font-size: 4em;
+	padding: 0 0.5em;
+}
+
+timer > div > div#controls {
+	text-align: center;
+	padding: 0 0 1em 0;
+}
+
+timer > div > div > input {
+	width: 10em;
+	height: 4em;
+	margin: 0 1.2em;
+
+}
+
+timer.flash > div {
+	background-color: red;
+}
+
+timer.running > div {
+	background-color: lightgreen;
+}
+
+timer.paused > div {
+	background-color: yellow;
+}

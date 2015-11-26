@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "angular": "angularjs#~1.4.7",
-    "angular-route": "~1.4.7"
+    "angular-route": "~1.4.7",
+    "angular-virtual-keyboard": "~0.4.3"
   }
 }

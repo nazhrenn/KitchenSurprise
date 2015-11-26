@@ -1,8 +1,10 @@
 ﻿extends master
 
 block headerScripts
+  link(rel="stylesheet" href="vendor/angular-virtual-keyboard/release/angular-virtual-keyboard.css")
   script(type="text/javascript" src="vendor/angular/angular.js")
   script(type="text/javascript" src="vendor/angular-route/angular-route.js")
+  script(type="text/javascript" src="vendor/angular-virtual-keyboard/release/angular-virtual-keyboard.min.js")
 
 block scripts
   script(type="text/javascript" src="static/app/kitchen.js")
@@ -14,3 +16,4 @@ block content
         a(href="#/home") Home
         a(href="#/coffee") Coffee
     div(ng-view)
+    div(ng-controller="timerController as timeCtrl" ng-include="'static/views/timers.html'")

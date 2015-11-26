@@ -1,0 +1,10 @@
+﻿<div class="timer" draggable>
+	<div id="close" ng-click="remove(); timeCtrl.removeTimer(title);">X</div>
+	<div id="title">{{title}}</div>
+	<div id="countdown">{{toHHMMSS(duration, true)}}</div>
+	<div id="controls">
+		<input ng-hide="running" type="button" value="Start" ng-click="start()" />
+		<input ng-show="running" type="button" value="Pause" ng-click="pause()" />
+		<input type="button" value="Reset" ng-click="reset()" />
+	</div>
+</div>
