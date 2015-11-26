@@ -88,15 +88,15 @@ kitchenApp.controller('timerController', function () {
 
 		if (segments.length == 3) {
 			duration += Number(segments[0] * 60 * 60, 10);
-			duration += Number.parseInt(segments[1] * 60, 10);
-			duration += Number.parseInt(segments[2], 10);
+			duration += Number(segments[1] * 60, 10);
+			duration += Number(segments[2], 10);
 		}
 		else if (segments.length == 2) {
-			duration += Number.parseInt(segments[0] * 60, 10);
-			duration += Number.parseInt(segments[1], 10);
+			duration += Number(segments[0] * 60, 10);
+			duration += Number(segments[1], 10);
 		}
 		else {
-			duration += Number.parseInt(segments[0], 10);
+			duration += Number(segments[0], 10);
 		}
 		this.addTimer(this.timer.title, duration + 1, this.timer.autoStart);
 		this.timer = defaultTimer();
