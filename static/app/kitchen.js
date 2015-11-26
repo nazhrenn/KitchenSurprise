@@ -87,16 +87,16 @@ kitchenApp.controller('timerController', function () {
 		var duration = 0;
 
 		if (segments.length == 3) {
-			duration += Number.parseInt(segments[0] * 60 * 60);
-			duration += Number.parseInt(segments[1] * 60);
-			duration += Number.parseInt(segments[2]);
+			duration += (segments[0] * 60 * 60);
+			duration += (segments[1] * 60);
+			duration += (segments[2]);
 		}
 		else if (segments.length == 2) {
-			duration += Number.parseInt(segments[0] * 60);
-			duration += Number.parseInt(segments[1]);
+			duration += (segments[0] * 60);
+			duration += (segments[1]);
 		}
 		else {
-			duration += Number.parseInt(segments[0]);
+			duration += (segments[0]);
 		}
 
 		this.addTimer(this.timer.title, duration, false);

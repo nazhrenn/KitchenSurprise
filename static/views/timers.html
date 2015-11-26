@@ -1,8 +1,13 @@
 ﻿<input type="button" value="Create Timer" ng-click="timeCtrl.displayCreateDialog=true" />
 <div ng-show="timeCtrl.displayCreateDialog">
-	<input type='text' ng-model="timeCtrl.timer.title" ng-virtual-keyboard />
-	<input type="text" ng-model="timeCtrl.timer.display" />
-
+	<div>
+		Title:
+		<input type='text' ng-model="timeCtrl.timer.title" ng-virtual-keyboard />
+	</div>
+	<div>
+		Duration:
+		<input type="text" ng-model="timeCtrl.timer.display" />
+	</div>
 	<div>
 		<div>
 			<input type="button" value="1" ng-click="timeCtrl.addDigit(1)" />
