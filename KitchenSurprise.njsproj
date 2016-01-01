@@ -39,6 +39,7 @@
     <Content Include="static\css\main.css" />
     <Content Include="static\partials\pane.html" />
     <Content Include="static\partials\timer.html" />
+    <Content Include="static\views\recipes.html" />
     <Content Include="static\views\home.html" />
     <Content Include="static\views\timers.html" />
     <Content Include="views\header.jade" />

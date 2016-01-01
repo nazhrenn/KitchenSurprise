@@ -7,6 +7,11 @@ kitchenApp.config(['$routeProvider', function ($routeProvider) {
 		controller: 'homeController',
 		controllerAs: 'home'
 	})
+	.when('/recipes', {
+		templateUrl: 'static/views/recipes.html',
+		controller: 'recipeController',
+		controllerAs: 'recipe'
+	})
 	.otherwise({
 		redirectTo: '/home'
 	});
@@ -44,6 +49,10 @@ var timerClass = function (title, duration, autoStart) {
 };
 
 kitchenApp.controller("homeController", ['$scope', function ($scope) {
+
+}]);
+
+kitchenApp.controller("recipeController", ['$scope', function ($scope) {
 
 }]);
 
